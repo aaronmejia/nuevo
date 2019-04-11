@@ -1,0 +1,116 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:verdana;
+    /*background-image:url(../imagenes/fondo_inicio.png);*/
+    background-color:white;
+}
+
+
+header{
+    width:98%;
+    height:auto;
+    background-color:#ffdf00;
+    color:black;
+    font-size:30px;
+    padding:2%;
+}
+
+#titulo{
+    background-color:gray;
+    width:92%;
+    padding:5%;
+    text-align:center;
+    font-size:22px;
+    color:white;
+    border-bottom:2px double black;
+}
+
+#contenedor_logo{
+    border-bottom:1px solid black;
+}
+.opciones{
+    width:90%;
+    height:auto;
+    margin-left:-100%;
+    padding:6%;
+    font-size:26px;
+    background-color:white;
+    border-bottom:1px solid black;
+}
+
+a{
+    text-decoration:none;
+    color:black;
+}
+
+li{
+    margin-top:3%;
+}
+
+#inductivos{
+    display:none;
+    font-size:22px;
+}
+
+#capacitivos{
+    display:none;
+    font-size:22px;
+}
+
+#resistivos{
+    display:none;
+    font-size:22px;
+}
+
+#informacion_personal{
+    display:none;
+    font-size:18px;
+}
+
+#uso{
+    display:none;
+    font-size:22px;
+}
+
+.boton_flecha{
+    margin-left:86%;
+    margin-top:-2%;
+    width:11%;
+}
+
+#flecha_11{
+    display:none;
+}
+
+#flecha_22{
+    display:none;
+}
+
+#flecha_33{
+    display:none;
+}
+
+#flecha_44{
+    display:none;
+}
+
+#flecha_55{
+    display:none;
+}
+
+.instrucciones{
+    width:100%;
+    margin:auto;
+}
+
+footer{
+    margin-top:10%;
+    padding:2%;
+    width:98%;
+    height:30px;
+    background-color:black;
+    text-align:center;
+    color:white;
+    font-size:12px;
+}

@@ -1,0 +1,86 @@
+body{
+    margin:0px;
+    padding:0px;
+    font-family:verdana;
+    background-image:url(../imagenes/fondo_inicio.png);
+    /*background-color:gray;*/
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    width:98%;
+    height:auto;
+    background-color:black;
+    color:white;
+    font-size:20px;
+    text-shadow:1px 1px black;
+    text-align:center;
+    padding:2%;
+    border-bottom:2px solid rgb(255, 196, 67);
+}
+
+#logo{
+    margin-top:30%;
+    margin-left:23%;
+    width:50%;
+    border:2px solid black;
+}
+
+/*#foco{
+    width:15%;
+    margin-top:10%;
+    z-index:1;
+    border-radius:300px;
+}*/
+
+#espacio_carga{
+    margin-top:25%;
+    margin-left:10%;
+    width:80%;
+    height:25px;
+    background-color:white;
+    border:2px solid black;
+}
+
+#linea_carga{
+   /* margin-top:25%;
+    margin-left:8.5%;*/
+    width:5%;
+    height:25px;
+    background-color:rgb(253, 220, 74);
+}
+
+p{
+    color:white;
+    font-size:25px;
+    text-align:center;
+    text-shadow:2px 1px black;
+}
+
+#comenzar{
+    margin:auto;
+    padding:2%;
+    width:40%;
+    height:auto;
+    background-color:white;
+    border:2px solid gray;
+    text-align:center;
+    font-size:18px;
+    font-family:verdana;
+    color:black;
+    text-shadow:1px 1px rgb(253, 220, 74);
+}
+
+footer{
+    margin-top:35%;
+    padding:2%;
+    width:98%;
+    height:30px;
+    background-color:black;
+    text-align:center;
+    color:white;
+    font-size:15px;
+}

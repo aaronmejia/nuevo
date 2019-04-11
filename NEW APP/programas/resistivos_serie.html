@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../estilos/estilos_tipos.css">
+    <script src="../jquery/dist/jquery.min.js"></script>
+    <title>RESISTIVOS SERIE</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img id="atras" src="../imagenes/flecha_retroceder.png"></a> &nbsp; <h3>CIRCUITOS RESISTIVOS EN SERIE</h3>
+    </header>
+    <br/>
+    <div id="proceso">
+        NUMERO DE RESISTENCIAS A MANEJAR
+        <br/><br/><hr/>
+        
+        <br/>
+
+        <select id="opciones" Onchange="opciones();"  Onchange="calcular();">
+            <option >Elige el numero de resistencias</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+
+        <br/><br/>
+        
+        <p id="r_1">Resistencia #1 &nbsp; <input id="resistencia_1" type="number" placeholder="Ω"></p>
+        <p id="r_2">Resistencia #2 &nbsp; <input id="resistencia_2" type="number" placeholder="Ω"></p>
+        <p id="r_3">Resistencia #3 &nbsp; <input id="resistencia_3" type="number" placeholder="Ω"></p>
+        <p id="r_4">Resistencia #4 &nbsp; <input id="resistencia_4" type="number" placeholder="Ω"></p>
+        <p id="r_5">Resistencia #5 &nbsp; <input id="resistencia_5" type="number" placeholder="Ω"></p>
+        <p id="r_6">Resistencia #6 &nbsp; <input id="resistencia_6" type="number" placeholder="Ω"></p>
+        <p id="r_7">Resistencia #7 &nbsp; <input id="resistencia_7" type="number" placeholder="Ω"></p>
+        <p id="r_8">Resistencia #8 &nbsp; <input id="resistencia_8" type="number" placeholder="Ω"></p>
+
+        <br/>
+        
+        Fórmula: RT = R1 + R2...
+        <br/><br/>
+
+        <div id="resultado">
+         
+        </div>
+
+        <input type="button" value="Calcular" id="calcular">
+
+    </div>
+    <script type="text/javascript">
+       //FUNCION PARA GUARDAR EL VALOR DEL SELECT Y MOSTRAR SUS OPCIONES
+       function opciones(){
+            var resistencias=document.querySelector("#opciones"); //Me guarda el elemento a_convertir en una variable
+            var numero_resistencias=resistencias.options[resistencias.selectedIndex].text; 
+            var calcular=document.getElementById("calcular");
+            var resistencia_1=document.querySelector("#resistencia_1");
+            var resistencia_2=document.querySelector("#resistencia_2");
+            var resistencia_3=document.querySelector("#resistencia_3");
+            var resistencia_4=document.querySelector("#resistencia_4");
+            var resistencia_5=document.querySelector("#resistencia_5");
+            var resistencia_6=document.querySelector("#resistencia_6");
+            var resistencia_7=document.querySelector("#resistencia_7");
+            var resistencia_8=document.querySelector("#resistencia_8");
+            var r_1= document.querySelector("#r_1");
+            var r_2= document.querySelector("#r_2");
+            var r_3= document.querySelector("#r_3");
+            var r_4= document.querySelector("#r_4");
+            var r_5= document.querySelector("#r_5");
+            var r_6= document.querySelector("#r_6");
+            var r_7= document.querySelector("#r_7");
+            var r_8= document.querySelector("#r_8");
+           // var resultado_1=(parseFloat(resistencia_1.value));
+            
+            var resultado=document.querySelector("#resultado");
+            if(numero_resistencias=="1"){
+                r_1.style.display="block";
+                r_2.style.display="none";
+                r_3.style.display="none";
+                r_4.style.display="none";
+                r_5.style.display="none";
+                r_6.style.display="none";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }else if(numero_resistencias=="2"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="none";
+                r_4.style.display="none";
+                r_5.style.display="none";
+                r_6.style.display="none";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }else if(numero_resistencias=="3"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="none";
+                r_5.style.display="none";
+                r_6.style.display="none";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }else if(numero_resistencias=="4"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="block";
+                r_5.style.display="none";
+                r_6.style.display="none";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }
+            else if(numero_resistencias=="5"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="block";
+                r_5.style.display="block";
+                r_6.style.display="none";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }
+            else if(numero_resistencias=="6"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="block";
+                r_5.style.display="block";
+                r_6.style.display="block";
+                r_7.style.display="none";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }else if(numero_resistencias=="7"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="block";
+                r_5.style.display="block";
+                r_6.style.display="block";
+                r_7.style.display="block";
+                r_8.style.display="none";
+                calcular.style.display="inline";
+            }else if(numero_resistencias=="8"){
+                r_1.style.display="block";
+                r_2.style.display="block";
+                r_3.style.display="block";
+                r_4.style.display="block";
+                r_5.style.display="block";
+                r_6.style.display="block";
+                r_7.style.display="block";
+                r_8.style.display="block";
+                calcular.style.display="inline";
+            }
+        }
+
+       document.getElementById("calcular").addEventListener("click",calcular,false);
+        
+       function calcular(){
+        var resistencias=document.querySelector("#opciones"); //Me guarda el elemento a_convertir en una variable
+        var numero_resistencias=resistencias.options[resistencias.selectedIndex].text; 
+        var resultado_1=(parseFloat(resistencia_1.value));
+        var resultado_2=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value));
+        var resultado_3=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value));
+        var resultado_4=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value)+parseFloat(resistencia_4.value));
+        var resultado_5=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value)+parseFloat(resistencia_4.value)+parseFloat(resistencia_5.value));
+        var resultado_6=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value)+parseFloat(resistencia_4.value)+parseFloat(resistencia_5.value)+parseFloat(resistencia_6.value));
+        var resultado_7=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value)+parseFloat(resistencia_4.value)+parseFloat(resistencia_5.value)+parseFloat(resistencia_6.value)+parseFloat(resistencia_7.value));
+        var resultado_8=(parseFloat(resistencia_1.value)+parseFloat(resistencia_2.value)+parseFloat(resistencia_3.value)+parseFloat(resistencia_4.value)+parseFloat(resistencia_5.value)+parseFloat(resistencia_6.value)+parseFloat(resistencia_7.value)+parseFloat(resistencia_8.value));
+        if(numero_resistencias=="1"){
+                resultado.innerHTML="SOLUCION = "+resultado_1+" Ω";
+        }else if(numero_resistencias=="2"){
+                resultado.innerHTML="SOLUCION = "+resultado_2+" Ω";
+        }else if(numero_resistencias=="3"){
+                resultado.innerHTML="SOLUCION = "+resultado_3+" Ω";
+        }else if(numero_resistencias=="4"){
+                resultado.innerHTML="SOLUCION = "+resultado_4+" Ω";
+        }else if(numero_resistencias=="5"){
+                resultado.innerHTML="SOLUCION = "+resultado_5+" Ω";
+        }else if(numero_resistencias=="6"){
+                 resultado.innerHTML="SOLUCION = "+resultado_6+" Ω";
+        }else if(numero_resistencias=="7"){
+                 resultado.innerHTML="SOLUCION = "+resultado_7+" Ω";
+        }else if(numero_resistencias=="8"){
+                 resultado.innerHTML="SOLUCION = "+resultado_8+" Ω";
+        }
+                
+        }   
+    
+     
+    </script>
+    <footer>
+        Aaron Mejia
+    </footer>
+</body>
+</html>
